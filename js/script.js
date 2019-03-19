@@ -70,29 +70,29 @@ var getQuote = Math.floor(Math.random() * (quotes.length) );
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
-
 function printQuote() {
   var print = getRandomQuote();
   var theString = "";
-   theString += "<p class= 'quotes'>" + print.quote + "</p>"
-   theString += "<p class= 'source'>" + print.source + "</p>"
-  
- if (print.citation !== true) {
-     theString += "<p class='citation'>" + print.citation + "</p>"
-   } else if (print.citation !== '') {
+   theString += "<p class= 'quote'>" + print.quote + "</p>"
+   theString += "<p class= 'source'>" + print.source;
+
+   if (print.citation !== true) {
+     theString += "<span class='citation'>" + print.citation + "</span>"
+   }
+    if (print.citation !== '') {
      theString += "";
    }
    if (print.year !== true) {
-     theString += "<p class='year'>" + print.year + "</p>"
-   } else if (print.year !== '') {
+     theString += "<span class='year'>" + print.year + "</span>"
+   }
+   if (print.year !== '') {
      theString += "";
    }
-  
+
 
   document.getElementById("quote-box").innerHTML = theString;
 }
 printQuote();
-
 
 
 /***
