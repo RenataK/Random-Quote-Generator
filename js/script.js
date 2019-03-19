@@ -76,7 +76,17 @@ function printQuote() {
   var theString = "";
    theString += "<p class= 'quotes'>" + print.quote + "</p>"
    theString += "<p class= 'source'>" + print.source + "</p>"
-
+  
+ if (print.citation !== true) {
+     theString += "<p class='citation'>" + print.citation + "</p>"
+   } else if (print.citation !== '') {
+     theString += "";
+   }
+   if (print.year !== true) {
+     theString += "<p class='year'>" + print.year + "</p>"
+   } else if (print.year !== '') {
+     theString += "";
+   }
   
 
   document.getElementById("quote-box").innerHTML = theString;
