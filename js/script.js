@@ -76,4 +76,4 @@ printQuote();
   below and will call on the 'printQuote' function.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
